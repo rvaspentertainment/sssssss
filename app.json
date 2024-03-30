@@ -1,0 +1,97 @@
+{
+    "name": "Watermark VideoBot",
+    "description": "A Modular telegram bot for Screenshots & Trim Videos.",
+    "logo": "https://telegra.ph/file/77fda23e2fa42714a0c53.jpg",
+    "repository": "https://github.com/MaviMods/Screenshot_bot",
+    "buildpacks":[
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        },
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "keywords": [
+        "telegram bot",
+        "pyrogram"
+    ],
+
+    "env": {
+        "BOT_TOKEN": {
+      "value":"6557888895:AfyujbAr677uhgrr67gcz",
+            "description": "Your Bot token from @Botfather"
+        },
+        "API_ID": {
+      "value":"29410389",
+            "description": "Your API_ID from https://my.telegram.org/apps"
+        },
+        "API_HASH": {
+      "value":"0c716764715886f6641477ffbb63e1ee",
+            "description": "Your API_HASH from https://my.telegram.org/apps"
+         },
+         "LOG_CHANNEL": {
+            "description": "Log channel's id",
+             "value":"-10012345678",
+             "required": true
+        },
+        "DATABASE_URL": {
+            "description": "MongoDB Url",
+             "value":"",
+             "required": true
+        },
+        "AUTH_USERS": {
+            "description": "Admin(s) of the bot. User's telegram id separated by space. Atleast one id should be specified.",
+             "value":"123456789",
+             "required": true
+        },
+        "HOST": {
+            "description": "Public URL of file streaming service",
+             "value":"https://example.com",
+             "required": false
+        },
+        "SESSION_NAME": {
+            "description": "Name you want to call your bot's session, Eg: bot's username.",
+             "value":"WaterMark-VideoBot",
+             "required": false
+        },
+        "MAX_PROCESSES_PER_USER": {
+            "description": "Number of parallel processes each user can have, defaults to 2.",
+             "value":"1",
+             "required": false
+        },
+        "TRACK_CHANNEL": {
+            "description": "User activity tracking channel's id. Only needed if you want to track and block any user. Disabled by default.",
+             "value":"-10012345678",
+             "required": false
+        },
+        "SLOW_SPEED_DELAY": {
+            "description": "Delay required between each interaction from users in seconds. Defaults to 5s.",
+             "value":"5",
+             "required": false
+        },
+        "TIMEOUT": {
+            "description": "Maximum time alloted to each process in seconds, after which process will be cancelled. Defaults to 1800s(30 mins).",
+             "value":"1800",
+             "required": false
+        },
+        "DEBUG": {
+            "description": "Set some value to use DEBUG logging level. INFO by default.",
+             "value":"INFO",
+             "required": false
+        },
+        "WORKER_COUNT": {
+            "description": "Number of process to be handled at a time. Defaults to 20.",
+             "value":"20",
+             "required": false
+        }
+    },
+    
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ]
+}
