@@ -8,7 +8,7 @@ from ..screenshotbot import ScreenShotBot
 from ..config import Config
 
 
-@ScreenShotBot.on_message(
+@ScreenShotBot.on_edited_message(
     filters.private
     & ((filters.text & ~filters.edited) | filters.media)
     & filters.incoming
