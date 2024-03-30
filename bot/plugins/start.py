@@ -14,9 +14,9 @@ async def start(c, m):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Project Channel", url="https://t.me/odbots"),
+                    InlineKeyboardButton("Update Channel", url="https://t.me/mavimods2"),
 
-                InlineKeyboardButton("My Father", url="https://t.me/odysseusmax")],
+                InlineKeyboardButton("Support Group", url="https://t.me/mavibot_support")],
             ]
         ),
     )
