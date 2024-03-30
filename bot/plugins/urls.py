@@ -13,7 +13,6 @@ from ..config import Config
     & ((filters.text | filters.media)
     & filters.incoming
 )
-async def _(c, m):
 
     if m.media:
         if not Utilities.is_valid_file(m):
