@@ -1,15 +1,11 @@
 FROM python:3.9
 
-WORKDIR /app
+RUN apt-get update -qq && apt-get -y install ffmpeg
 
-COPY requirements.txt /app/
-RUN pip3 install -r requirements.txt
-RUN pip3 install ffmpeg-python
-RUN apt -qq update && \
-    apt -qq install -y git wget pv jq python3-dev ffmpeg mediainfo neofetch && \
-    apt-get install wget -y -f && \
-    apt-get install fontconfig -y -f
+WORKDIR /usr/src/app
 
-COPY . /app
+COPY . .
 
-CMD python3 -m bot
+RUN pip install --upgrade pip && pip install -U -r requirements.txt
+
+CMD [ "python", "-m", "bot" ]
