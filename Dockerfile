@@ -2,11 +2,11 @@ FROM python:3.9.18
 
 
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
 
 
-COPY . /app/
+COPY ...
 
 
 
