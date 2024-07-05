@@ -22,4 +22,4 @@ RUN apt update && apt install -y ffmpeg
 
 
 
-CMD ["python", "bot.py"]
+CMD [ "python3", "-m", "bot" ]
