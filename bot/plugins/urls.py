@@ -1,5 +1,4 @@
 import datetime
-
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -7,13 +6,12 @@ from ..utils import Utilities
 from ..screenshotbot import ScreenShotBot
 from ..config import Config
 
-
 @ScreenShotBot.on_edited_message(
     filters.private
     & ((filters.text | filters.media)
-    & filters.incoming
+    & filters.incoming)
 )
-
+async def handle_message(client, m):
     if m.media:
         if not Utilities.is_valid_file(m):
             return
