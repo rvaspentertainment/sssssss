@@ -32,6 +32,9 @@ async def _(c, m):
     else:
         file_link = m.text
 
+    await snt.edit_text("file link generated.")
+   
+
     duration = await Utilities.get_duration(file_link)
     if isinstance(duration, str):
         await snt.edit_text("😟 Sorry! I cannot open the file.")
