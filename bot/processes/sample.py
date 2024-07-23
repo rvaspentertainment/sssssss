@@ -115,7 +115,7 @@ class SampleVideoProcess(BaseProcess):
                 await self.input_message.edit_message_text(
                     text=ms.SAMPLE_VIDEO_PROCESS_SUCCESS
                 )
-                await upload_notify()
+                
                 await self.media_message.reply_video(
                     video=str(sample_file),
                     quote=True,
@@ -128,7 +128,7 @@ class SampleVideoProcess(BaseProcess):
                     width=width,
                     height=height,
                     supports_streaming=True,
-                    progress=upload_notify,
+                    
                 )
 
                 await self.input_message.edit_message_text(
@@ -145,4 +145,4 @@ class SampleVideoProcess(BaseProcess):
             await log_msg.reply_text(
                 e.for_admin,
                 quote=True,
-            )
+                    )
